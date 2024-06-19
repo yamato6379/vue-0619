@@ -1,0 +1,56 @@
+{
+  "name": "@chofufestival/nuxt-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "husky && nuxt prepare",
+    "lint": "run-s format lint:filename lint:script lint:style",
+    "lint:filename": "ls-lint",
+    "lint:script": "eslint --max-warnings 0 --fix .",
+    "lint:style": "stylelint --max-warnings 0 --ignore-path .gitignore --fix **/*.{css,scss,vue}",
+    "format": "prettier --check --write --ignore-path .gitignore .",
+    "precommit:lint:filename": "ls-lint",
+    "precommit:lint:script": "eslint --max-warnings 0",
+    "precommit:lint:style": "stylelint --max-warnings 0 --ignore-path .gitignore",
+    "precommit:format": "prettier --check --ignore-path .gitignore"
+  },
+  "lint-staged": {
+    "*": [
+      "yarn precommit:lint:filename"
+    ],
+    "./**/*.{js,mjs,ts,mts,tsx,vue}": [
+      "yarn precommit:format",
+      "yarn precommit:lint:script"
+    ],
+    "./**/*.{css,scss,vue}": [
+      "yarn precommit:lint:style"
+    ]
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^0.3.13",
+    "@nuxt/image": "^1.7.0",
+    "nuxt": "^3.12.2",
+    "vue": "^3.4.29",
+    "vue-router": "^4.3.3"
+  },
+  "devDependencies": {
+    "@chofufestival/linter-rules": "https://github.com/chofufestival/linter-rules.git#commit=cf2c457f0af3bac07dcfec95385e625353ce5d53",
+    "@commitlint/cli": "^19.3.0",
+    "@ls-lint/ls-lint": "^2.2.3",
+    "@vueuse/core": "^10.11.0",
+    "@vueuse/nuxt": "^10.11.0",
+    "eslint": "^9.5.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.3.2",
+    "sass": "^1.77.6",
+    "stylelint": "^16.6.1",
+    "typescript": "^5.4.5"
+  },
+  "packageManager": "yarn@4.2.1"
+}

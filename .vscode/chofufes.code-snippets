@@ -1,0 +1,26 @@
+{
+  "電気通信大学": {
+    "prefix": "uec",
+    "body": ["電気通信大学"]
+  },
+  "The University of Electro-Communications": {
+    "prefix": "uec-en",
+    "body": ["The University of Electro-Communications"]
+  },
+  "調布祭実行委員会": {
+    "prefix": "chofu-fes",
+    "body": ["調布祭実行委員会"]
+  },
+  "Chofu Festival Executive Committee": {
+    "prefix": "chofu-fes-en",
+    "body": ["Chofu Festival Executive Committee"]
+  },
+  "◯調": {
+    "prefix": "marucho",
+    "body": ["◯調"]
+  },
+  "@chofusai.uec.ac.jp": {
+    "prefix": "@chofusai",
+    "body": ["@chofusai.uec.ac.jp"]
+  }
+}

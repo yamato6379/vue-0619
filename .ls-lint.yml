@@ -1,0 +1,17 @@
+ls:
+  .jpg: kebab-case
+  .png: kebab-case
+  .svg: kebab-case
+  .webp: kebab-case
+
+  src:
+    .dir: kebab-case | regex:\[.+\] | regex:\(.+\)
+    .ts: kebab-case
+    .vue: kebab-case
+
+  src/components:
+    .vue: regex:index | PascalCase
+
+ignore:
+  - .git
+  - node_modules
